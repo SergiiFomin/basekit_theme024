@@ -1259,8 +1259,7 @@ div[id$="post"] {
         top:auto;
         /*background-color: @dark;*/
         background-image: image('/images/template/content-wrapper.png');
-        background-position: 0 bottom;
-        background-repeat: repeat-x;
+        background-position: 0 bottom;        background-repeat: repeat-x;
         font-size: 16px;
         padding: 20px;
         color: @color-swatch1;
@@ -1367,6 +1366,17 @@ span.drop{
   .responsiveslideshow .slideshow-widget > ul.slideshow-image-list .content-wrapper .title {
     font-size: 28px;
   }
+  div[id$="post"],
+  div[id$="showimages"] {
+    ul.gallery-widget{
+      li{
+        .title{
+          font-size: 12px;
+          padding: 10px;
+        }
+      }
+    }
+  }
 } 
 
 /*== Up to 980px ======================================================
@@ -1390,6 +1400,20 @@ span.drop{
     figure.fleft{
       float: none;
       margin-right: 0;
+    }
+  }
+  div[id$="post"],
+  div[id$="showimages"] {
+    ul.gallery-widget{
+      li{
+        .inner{
+          display: inline-block;
+        }
+        .title{
+          font-size: 12px;
+          padding: 10px;
+        }
+      }
     }
   }
 }
@@ -1465,6 +1489,18 @@ span.drop{
     figure.fleft{
       float: left;
       margin-right: 20px;
+    }
+  }
+  div[id$="post"] {
+    ul.gallery-widget{
+      li{
+        float: left;
+        width: 49%;
+        margin: 0 0 2% 1%;
+        &:first-child{
+          margin-right: 1%;
+        }
+      }
     }
   }
 }
