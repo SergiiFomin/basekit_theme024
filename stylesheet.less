@@ -1173,7 +1173,7 @@ input.button,
       margin: 0;
       padding: 0;
       position: relative;
-      height: 450px;
+      height: 381px;
       .slideshow-image{
         width:auto;
         height:100%;
@@ -1249,7 +1249,19 @@ div[id$="post"] {
     li{
       float: none;
       width: 100%;
-      img{}
+      .title{
+        position:absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        top:auto;
+        /*background-color: @dark;*/
+        background-image: image('/images/template/content-wrapper.png');
+        background-position: 0 0;
+        background-repeat: repeat-x;
+        font-size: 16px;
+        padding: 30px 20px;
+      }
     }
   }
 }
