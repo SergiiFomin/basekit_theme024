@@ -1,0 +1,62 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bg-glow">
+    <div class="global">
+        <!--header-->
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <article class="span12">
+                        {{widget('content', 'toplist', {content: '<ul><li><a href="#">Login</a></li><li><a href="#">Site Map</a></li><li><a href="#">Help</a></li><li><a href="#">FAQs</a></li><li><a href="#">Search</a></li></ul>', lines: 'all'})|raw}}
+                    </article>
+                </div>
+            </div>
+        </div>
+        <!--header-->
+        <header>
+            <div class="header">
+                <div class="container">
+                    <div class="row">
+                        <article class="span12">
+                            <div class="row">
+                                <article class="span4">
+                                    {{widget('logo', 'name', {"defaultlogo": asset('images/logo.png')})|raw}}
+                                    {{widget('profile', 'companydescription', { 'profileType':'companydescription', 'companydescription':'Keep your vehicle in shape!'})|raw}}
+                                </article>
+                                <article class="span8">
+                                    {{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
+                                </article>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--content-->
+        <div class="container">
+            <div class="row">
+                <article class="span12">
+
+                    {{zone('main')|raw}}
+
+                </article>
+            </div>
+        </div>
+        <!--footer-->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <section class="span12">
+                        {{widget('companyname', 'companyname', {"business": "Cars"})|raw}}
+                        {{widget('profile', 'copyright', { 'profileType':'copyright', 'copyright':'&copy Copyright 2014. All rights reserved'})|raw}}
+                        {{widget('space', 'space', {'height': '30'})|raw}}
+                    </section>
+                </div>
+            </div>
+        </footer>
+    </div>    
+</div>
+
+{% endblock %}
